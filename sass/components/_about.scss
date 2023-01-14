@@ -1,0 +1,42 @@
+.about-section{
+    @media screen and (max-width: 1199px){
+        display: none;
+    }
+    @media screen and (min-width: 1200px){
+        display: block;
+    }
+    padding-top: 0px;
+}
+
+.about__title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+
+.about-list__card{
+    position: relative;
+}
+
+.about-list__info{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.about-list__title{
+    text-align: center;
+    color: var(--third-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase; 
+}

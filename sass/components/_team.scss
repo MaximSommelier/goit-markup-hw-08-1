@@ -1,0 +1,112 @@
+    .section-team{
+        background-color: var(--bg-color-team);
+    }
+    
+    .section-team__title{
+        text-align: center;
+        margin-bottom: 30px;
+        @media screen and (min-width: 1200px){
+            margin-bottom: 50px;
+        }
+    }
+    
+    .list-team{
+        display: block;
+        width: 100%;
+
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+        // gap: 30px;
+       }
+
+    @media screen and (min-width: 1200px){
+        margin: 0%;
+       }
+    }
+    
+    .list-team__card{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 30px;
+
+        // @media screen and (max-width: 767px){
+        //     flex-basis: calc((100% - 60px) / 2);
+        // }
+    
+        // @media screen and (max-width: 1199px){
+        //     flex-basis: calc((100% - 90px) / 4);
+        // }
+        
+    @media screen and (min-width: 768px){
+        flex-basis: calc((100% - 60px) / 2);
+        margin: 15px;
+        }
+
+    @media screen and (min-width: 1200px){
+        flex-basis: calc((100% - 90px) / 4); 
+        margin: 0%;
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+}
+    
+    .comand{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: var(--third-color);
+    }
+    
+    .comand__title{
+        margin-bottom: 10px;
+        text-align: center;
+        color: var(--main-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+    }
+    
+    .comand__text{
+        text-align: center;
+        color: var(--little-color) ;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.18;
+        margin-bottom: 16px;
+    }
+    
+    .socials{
+        @include centeredFlex(flex);
+        gap: 10px;
+    }
+    
+    .socials__links{
+        @include centeredFlex(flex);
+        background-color: var(--third-color);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+    @media screen and (min-width: 1200px){
+        transition: background-color var(--timing-function);
+        
+            &:focus,
+            &:hover{
+            background-color: var(--second-color);
+            }
+        
+            &:focus .socials__icon,
+            &:hover .socials__icon{
+            fill: var(--third-color);
+            }
+        }
+    }
+
+    .socials__icon {
+        fill: var(--icons-color);
+
+    @media screen and (min-width: 1200px){
+        transition: fill var(--timing-function);
+        }
+    }
